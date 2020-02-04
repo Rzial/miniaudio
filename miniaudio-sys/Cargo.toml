@@ -1,0 +1,27 @@
+[package]
+name = "miniaudio-sys"
+description = "FFI bindings for miniaudio"
+version = "0.0.0"
+authors = ["Rzial <pedrosolid@gmail.com>", "Nazariglez <nazari.nz@gmail.com>"]
+repository = "https://github.com/Rzial/miniaudio/tree/master/miniaudio-sys"
+links = "miniaudio"
+build = "gen/build.rs"
+edition = "2018"
+license-file = "LICENSE"
+
+[features]
+default = ["ma_flac_decoder", "ma_mp3_decoder", "ma_vorbis_decoder", "ma_wav_decoder"]
+
+ma_debug          = []
+
+ma_flac_decoder   = []
+ma_mp3_decoder    = []
+ma_vorbis_decoder = []
+ma_wav_decoder    = []
+
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+bindgen = "0.52.0"
+cc = { version = "1.0", features = ["parallel"] }

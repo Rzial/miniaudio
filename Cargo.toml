@@ -1,0 +1,11 @@
+[package]
+name = "miniaudio"
+description = "FFI bindings for miniaudio"
+version = "0.0.0"
+authors = ["Rzial <pedrosolid@gmail.com>", "Nazariglez <nazari.nz@gmail.com>"]
+repository = "https://github.com/Rzial/miniaudio"
+edition = "2018"
+license-file = "LICENSE"
+
+[dependencies]
+miniaudio-sys = { path = "miniaudio-sys", version = "0.0.0" }
